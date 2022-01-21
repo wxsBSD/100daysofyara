@@ -16,3 +16,9 @@ rule adversary_methods_pe_with_openssh_key {
     uint16(0) == 0x5A4D and uint32(uint32(0x3C)) == 0x00004550 and all of them
 }
 ```
+
+Source: https://twitter.com/stvemillertime/status/1483914381788336128
+
+```import "pe"
+rule SwearEngine_Fuck: TTP { strings: $a = /([Ff]uck|FUCK)/ condition: pe.number_of_signatures == 0 and $a }
+```
